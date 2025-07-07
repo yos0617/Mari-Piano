@@ -444,44 +444,185 @@
         
         /* レスポンシブデザイン */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
             .hero-content h1 {
                 font-size: 2rem;
             }
-            
             .hero-content p {
                 font-size: 1.1rem;
             }
-            
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
             }
-            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+                min-width: 200px;
+            }
             .header-content {
                 flex-direction: column;
                 gap: 15px;
+                text-align: center;
             }
-            
             .contact-info {
                 flex-direction: column;
                 gap: 10px;
             }
-            
+            .phone {
+                font-size: 1rem;
+            }
+            .free-trial {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
             .nav-links {
                 flex-direction: column;
                 gap: 10px;
             }
-            
-            .access-content {
-                grid-template-columns: 1fr;
+            .nav-links a {
+                padding: 12px 20px;
+                font-size: 0.95rem;
             }
-            
-            .course-grid {
-                grid-template-columns: 1fr;
+            .features h2, .courses h2, .pricing h2, .access h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
             }
-            
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .feature-card {
+                padding: 25px;
+            }
+            .feature-card h3 {
+                font-size: 1.3rem;
+            }
+            .course-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .course-header h3 {
+                font-size: 1.5rem;
+            }
+            .course-content {
+                padding: 25px;
+            }
+            .pricing-table th,
+            .pricing-table td {
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+            .access-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .access-info {
+                padding: 25px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+        /* スマートフォン専用の調整 */
+        @media (max-width: 480px) {
+            .hero {
+                height: 40vh;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .features, .courses, .pricing, .access {
+                padding: 50px 0;
+            }
+            .features h2, .courses h2, .pricing h2, .access h2 {
+                font-size: 1.8rem;
+            }
+            .feature-card {
+                padding: 20px;
+            }
+            .feature-card h3 {
+                font-size: 1.2rem;
+            }
+            .course-header {
+                padding: 20px;
+            }
+            .course-header h3 {
+                font-size: 1.3rem;
+            }
+            .course-content {
+                padding: 20px;
+            }
+            .pricing-table {
+                font-size: 0.85rem;
+            }
+            .pricing-table th,
+            .pricing-table td {
+                padding: 12px 8px;
+            }
+            .access-info {
+                padding: 20px;
+            }
+            .access-info h3 {
+                font-size: 1.3rem;
+            }
+            /* 画像のレスポンシブ対応 */
+            img, .responsive-image {
+                max-width: 100%;
+                height: auto;
+            }
+            /* タッチ操作の最適化 */
+            .nav-links a,
+            .cta-button,
+            .free-trial {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            /* フォーム要素のタッチ最適化 */
+            input, select, textarea, button {
+                min-height: 44px;
+                font-size: 16px; /* iOSでズームを防ぐ */
+            }
+        }
+        /* タブレット用の調整 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        /* 画像のレスポンシブ対応 */
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        /* タッチデバイス用のホバー効果調整 */
+        @media (hover: none) {
+            .feature-card:hover,
+            .course-card:hover,
+            .cta-button:hover,
+            .free-trial:hover {
+                transform: none;
             }
         }
         
@@ -606,21 +747,21 @@
                 <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <h3 style="color: #ff6b9d; margin-bottom: 20px;">音楽の楽しさを感じながら、ピアノを大好きになってもらいたい！</h3>
                     <p style="margin-bottom: 20px; line-height: 1.8;">当教室では、幼児からシニアまで幅広い年齢層の方々に、音楽の楽しさを伝えています。一人ひとりのペースに合わせたレッスンで、無理なく上達していただけます。</p>
-                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
-                        <img src="images/ピアノを弾く子供画像.png" alt="ピアノを弾く子供" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
-                        <div style="flex: 1;">
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <img src="images/ピアノを弾く子供画像.png" alt="ピアノを弾く子供" class="responsive-image" style="width: 200px; height: 150px; object-fit: cover; flex-shrink: 0;">
+                        <div style="flex: 1; min-width: 250px;">
                             <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">ピアノ個人レッスン　自分のペースで楽しく上達♪</strong><br>個人レッスンでは、基礎から丁寧に指導し、楽しみながら技術を身につけていただきます。<br>「昔習っていたけれど、もう一度あの曲を弾いてみたい」<br>「ずっと憧れていたあの曲に挑戦してみたい」<br>そんなご希望にも、しっかりとお応えします。</p>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
-                        <img src="images/リトミック画像.png" alt="リトミック" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
-                        <div style="flex: 1;">
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <img src="images/リトミック画像.png" alt="リトミック" class="responsive-image" style="width: 200px; height: 150px; object-fit: cover; flex-shrink: 0;">
+                        <div style="flex: 1; min-width: 250px;">
                             <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">季節の歌やリトミックで、音楽をもっと楽しく♪</strong><br>季節の歌を通して、美しい音色や正しいリズムを感じながら、音楽に親しんでいただけます。<br>リトミックでは、音に合わせて体を動かすことで、音楽を身体で表現する楽しさを体験できます。</p>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
-                        <img src="images/音符画像.png" alt="音符" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
-                        <div style="flex: 1;">
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <img src="images/音符画像.png" alt="音符" class="responsive-image" style="width: 200px; height: 150px; object-fit: cover; flex-shrink: 0;">
+                        <div style="flex: 1; min-width: 250px;">
                             <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">シニアの方へ ゆったり音楽レッスン♪</strong></p>
                             <p style="line-height: 1.8;">懐かしい曲やお好きな曲を中心に、ゆっくりとしたペースでレッスンを進めています。<br>無理のない内容で、音楽を楽しみながら、心豊かなひとときを過ごしませんか？</p>
                             <p style="line-height: 1.8;">ピアノを弾いたり、歌を歌ったりすることで、自然と指や頭を使うリハビリにもつながります。<br>音楽を通じて、いきいきとした毎日を応援します♪</p>
@@ -678,14 +819,14 @@
             <div class="container">
                 <h2 style="margin-bottom: 15px;">講師プロフィール</h2>
                 <h3 style="text-align: center; color: #333; margin-bottom: 30px; font-size: 1.8rem;">吉野 まり</h3>
-                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: left; display: flex; align-items: flex-start; gap: 40px;">
-                    <div style="flex: 2; min-width: 0;">
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: left; display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 2; min-width: 250px;">
                         <p style="line-height: 1.8; color: #666; margin-bottom: 20px;">はじめまして。<br>長年の指導経験をもつ、ピアノとリトミックの講師です。</p>
                         <p style="line-height: 1.8; color: #666; margin-bottom: 20px;">小さなお子さまからシニアの方まで、年齢や目標に合わせて、ゆっくりていねいにレッスンを行っています。<br>「音楽を通して、心がほっとあたたかくなるような時間を過ごしてほしい」<br>そんな想いを大切に、一人ひとりに寄り添ったレッスンを心がけています。</p>
                         <p style="line-height: 1.8; color: #666;">中学校・高校の音楽教員免許のほか、保育士資格も持っており、現在は保育園でリトミックの指導もしています。<br>保育士試験や音楽のテスト対策など、具体的な目標に向けたサポートもおまかせください。</p>
                     </div>
                     <div style="flex: 1; min-width: 120px; text-align: center;">
-                        <img src="images/IMG_6074.png" alt="講師イラスト" style="width: 100%; max-width: 180px; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <img src="images/IMG_6074.png" alt="講師イラスト" class="responsive-image" style="width: 100%; max-width: 180px; height: auto;">
                     </div>
                 </div>
             </div>
