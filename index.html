@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まりピアノ・リトミック教室 | 幼児からシニアまで個人レッスン | 国分寺市</title>
+    <meta name="description" content="国分寺市光町のまりピアノ・リトミック教室。幼児からシニアまで一人ひとりに合わせた音楽レッスン。ピアノ、リトミック、保育士試験対策も対応。無料体験レッスン受付中！">
+    <meta name="keywords" content="ピアノ教室,リトミック,国分寺,音楽教室,個人レッスン,幼児,シニア,保育士試験">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="まりピアノ・リトミック教室 | 国分寺市の音楽教室">
+    <meta property="og:description" content="幼児からシニアまで一人ひとりに合わせた音楽レッスン。無料体験レッスン受付中！">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans CJK JP', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Osaka', 'MS PGothic', sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #ff6b9d, #ff8e9e);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .phone {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .free-trial {
+            background: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .free-trial:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ナビゲーション */
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nav-links a:hover {
+            background: #ff6b9d;
+            color: white;
+        }
+        
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/ピアノ画像.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background: #ff6b9d;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,107,157,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,157,0.4);
+        }
+        
+        .cta-button.secondary {
+            background: #4CAF50;
+        }
+        
+        /* 特徴セクション */
+        .features {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', sans-serif;
+            font-weight: bold;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.15);
+            transition: transform 0.3s ease;
+            border: 3px solid #ffd1dc;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff6b9d, #ff8e9e, #ffb3c1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+            background: #ff6b9d;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* コースセクション */
+        .courses {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .courses h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', sans-serif;
+            font-weight: bold;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-header {
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+        
+        .course-card:nth-child(1) .course-header { background: #ff6b9d; }
+        .course-card:nth-child(2) .course-header { background: #ffa726; }
+        .course-card:nth-child(3) .course-header { background: #66bb6a; }
+        
+        .course-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .course-content {
+            padding: 30px;
+        }
+        
+        .course-content p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .course-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b9d;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* 料金表 */
+        .pricing {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', sans-serif;
+            font-weight: bold;
+        }
+        
+        .pricing-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .pricing-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table th {
+            background: #ff6b9d;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-table td {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        /* アクセス */
+        .access {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .access h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', 'Meiryo', sans-serif;
+            font-weight: bold;
+        }
+        
+        .access-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .access-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        .access-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .access-info p {
+            margin-bottom: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .map-placeholder {
+            background: #e0e0e0;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* フッター */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ff6b9d;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .footer-section a:hover {
+            color: #ff6b9d;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            color: #999;
+        }
+        
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .access-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* ページ切り替え用の非表示クラス */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="javascript:void(0);" class="logo" onclick="showPage('home')">まりピアノ・リトミック教室</a>
+                <div class="contact-info">
+                    <div class="phone">📞 090-5401-8282</div>
+                    <a href="javascript:void(0);" class="free-trial" onclick="showPage('contact')">無料体験レッスン受付中！</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ナビゲーション -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="javascript:void(0);" onclick="showPage('home')">ホーム</a>
+                <a href="javascript:void(0);" onclick="showPage('about')">教室について</a>
+                <a href="javascript:void(0);" onclick="showPage('courses')">コース・料金</a>
+                <a href="javascript:void(0);" onclick="showPage('instructor')">講師プロフィール</a>
+                <a href="javascript:void(0);" onclick="showPage('access')">アクセス</a>
+                <a href="javascript:void(0);" onclick="showPage('contact')">お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ホームページ -->
+    <div id="home" class="page active">
+        <!-- メインビジュアル -->
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <h1>まりピアノ・リトミック教室</h1>
+                <p>幼児からシニアまで一人ひとりに合わせた音楽レッスン</p>
+            </div>
+        </section>
+
+
+
+        <!-- メッセージセクション -->
+        <section class="message">
+            <div class="container">
+                <div style="text-align: center; padding: 15px 20px; margin: 10px 0;">
+                    <h2 style="font-size: 2rem; margin-bottom: 8px; color: #ff6b9d;">音楽を通じて、心がほっとするような豊かな時間をご一緒に過ごしませんか？</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- コースセクション -->
+        <section class="courses">
+            <div class="container">
+                <div class="course-grid">
+                    <div class="course-card fade-in">
+                        <div class="course-header">
+                            <h3>ピアノ</h3>
+                        </div>
+                        <div class="course-content">
+                            <p>個別レッスンで音楽の基礎を学びながら、楽しく上達するレッスン。初心者から上級者まで対応いたします。</p>
+                        </div>
+                    </div>
+                    <div class="course-card fade-in">
+                        <div class="course-header">
+                            <h3>リトミック</h3>
+                        </div>
+                        <div class="course-content">
+                            <p>音を身体で表現する楽しいリトミック。リズムや音色を感じながら、音楽的感性を豊かに育てます。</p>
+                        </div>
+                    </div>
+                    <div class="course-card fade-in">
+                        <div class="course-header">
+                            <h3>シニア</h3>
+                        </div>
+                        <div class="course-content">
+                            <p>ピアノや歌をとおして指や頭を動かし、一緒に楽しく。ゆったりとしたペースで音楽を楽しめます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 教室についてページ -->
+    <div id="about" class="page">
+        <section class="features">
+            <div class="container">
+                <h2>教室について</h2>
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #ff6b9d; margin-bottom: 20px;">音楽の楽しさを感じながら、ピアノを大好きになってもらいたい！</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8;">当教室では、幼児からシニアまで幅広い年齢層の方々に、音楽の楽しさを伝えています。一人ひとりのペースに合わせたレッスンで、無理なく上達していただけます。</p>
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
+                        <img src="images/ピアノを弾く子供画像.png" alt="ピアノを弾く子供" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
+                        <div style="flex: 1;">
+                            <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">ピアノ個人レッスン　自分のペースで楽しく上達♪</strong><br>個人レッスンでは、基礎から丁寧に指導し、楽しみながら技術を身につけていただきます。<br>「昔習っていたけれど、もう一度あの曲を弾いてみたい」<br>「ずっと憧れていたあの曲に挑戦してみたい」<br>そんなご希望にも、しっかりとお応えします。</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
+                        <img src="images/リトミック画像.png" alt="リトミック" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
+                        <div style="flex: 1;">
+                            <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">季節の歌やリトミックで、音楽をもっと楽しく♪</strong><br>季節の歌を通して、美しい音色や正しいリズムを感じながら、音楽に親しんでいただけます。<br>リトミックでは、音に合わせて体を動かすことで、音楽を身体で表現する楽しさを体験できます。</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 20px;">
+                        <img src="images/音符画像.png" alt="音符" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); flex-shrink: 0;">
+                        <div style="flex: 1;">
+                            <p style="line-height: 1.8;"><strong style="font-size: 1.2rem; color: #1e3a8a;">シニアの方へ ゆったり音楽レッスン♪</strong></p>
+                            <p style="line-height: 1.8;">懐かしい曲やお好きな曲を中心に、ゆっくりとしたペースでレッスンを進めています。<br>無理のない内容で、音楽を楽しみながら、心豊かなひとときを過ごしませんか？</p>
+                            <p style="line-height: 1.8;">ピアノを弾いたり、歌を歌ったりすることで、自然と指や頭を使うリハビリにもつながります。<br>音楽を通じて、いきいきとした毎日を応援します♪</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- コース・料金ページ -->
+    <div id="courses" class="page">
+        <section class="pricing">
+            <div class="container">
+                <h2>コース・料金</h2>
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>コース</th>
+                                <th>月額（税込）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ピアノ（月3回）</td>
+                                <td>6,000円〜</td>
+                            </tr>
+                            <tr>
+                                <td>リトミック＆ピアノ（月2回）</td>
+                                <td>5,000円〜</td>
+                            </tr>
+                            <tr>
+                                <td>リトミック＆ピアノ（月3回）</td>
+                                <td>6,000円〜</td>
+                            </tr>
+                            <tr>
+                                <td>シニア（月2回）</td>
+                                <td>4,000円</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="background: #fff3cd; padding: 30px; border-radius: 15px; margin-top: 40px; text-align: center;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">特別レッスンも承ります</h3>
+                    <p style="color: #856404; line-height: 1.8;">中高の音楽テスト、保育士試験対策（ピアノ実技）などの目的に合わせたレッスンもいたします。お気軽にご相談ください。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 講師紹介ページ -->
+    <div id="instructor" class="page">
+        <section class="features">
+            <div class="container">
+                <h2 style="margin-bottom: 15px;">講師プロフィール</h2>
+                <h3 style="text-align: center; color: #333; margin-bottom: 30px; font-size: 1.8rem;">吉野 まり</h3>
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: left; display: flex; align-items: flex-start; gap: 40px;">
+                    <div style="flex: 2; min-width: 0;">
+                        <p style="line-height: 1.8; color: #666; margin-bottom: 20px;">はじめまして。<br>長年の指導経験をもつ、ピアノとリトミックの講師です。</p>
+                        <p style="line-height: 1.8; color: #666; margin-bottom: 20px;">小さなお子さまからシニアの方まで、年齢や目標に合わせて、ゆっくりていねいにレッスンを行っています。<br>「音楽を通して、心がほっとあたたかくなるような時間を過ごしてほしい」<br>そんな想いを大切に、一人ひとりに寄り添ったレッスンを心がけています。</p>
+                        <p style="line-height: 1.8; color: #666;">中学校・高校の音楽教員免許のほか、保育士資格も持っており、現在は保育園でリトミックの指導もしています。<br>保育士試験や音楽のテスト対策など、具体的な目標に向けたサポートもおまかせください。</p>
+                    </div>
+                    <div style="flex: 1; min-width: 120px; text-align: center;">
+                        <img src="images/IMG_6074.png" alt="講師イラスト" style="width: 100%; max-width: 180px; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- アクセスページ -->
+    <div id="access" class="page">
+        <section class="access">
+            <div class="container">
+                <h2>アクセス</h2>
+                <div style="max-width: 600px; margin: 0 auto; margin-bottom: 30px;">
+                    <h3 style="color: #ff6b9d; margin-bottom: 20px; text-align: center; font-size: 1.8rem;">まりピアノ・リトミック教室</h3>
+                    <div style="text-align: left; padding-left: 0;">
+                        <p><strong>所在地：</strong>吉野まり</p>
+                        <p><strong>住所：</strong>国分寺市光町（国分寺市立第二小学校そば）</p>
+                        <p><strong>駐車場：</strong>あり</p>
+                        <p><strong>電話：</strong>090-5401-8282</p>
+                        <p style="margin-top: 20px; color: #ff6b9d; font-weight: bold;">詳細な住所は、お問い合わせの際にお伝えいたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- お問い合わせページ -->
+    <div id="contact" class="page">
+        <section class="features">
+            <div class="container">
+                <h2>お問い合わせ・無料体験レッスン</h2>
+                <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <div style="background: #4CAF50; color: white; padding: 20px; border-radius: 10px; font-size: 1.3rem; font-weight: bold;">
+                            無料体験レッスン受付中！
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                        <div style="text-align: center;">
+                            <h3 style="color: #ff6b9d; margin-bottom: 20px;">📞 お電話でのお問い合わせ</h3>
+                            <p style="font-size: 1.5rem; font-weight: bold; color: #333; margin-bottom: 15px;">090-5401-8282</p>
+                            <p style="color: #666; line-height: 1.8;">受付時間：9:00〜20:00<br>（レッスン中は出られない場合があります）</p>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <h3 style="color: #ff6b9d; margin-bottom: 20px;">📧 メールでのお問い合わせ</h3>
+                            <p style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 15px;">mari8008.cl@gmail.com</p>
+                            <p style="color: #666; line-height: 1.8;">24時間受付<br>2日以内にご返信いたします</p>
+                            <button onclick="openContactModal()" style="background: #ff6b9d; color: white; border: none; padding: 12px 25px; border-radius: 25px; font-size: 1rem; cursor: pointer; margin-top: 15px; transition: background 0.3s;">📝 お問い合わせフォーム</button>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <p style="color: #ff6b9d; font-weight: bold; font-size: 1.1rem;">お気軽にお問い合わせください♪</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>まりピアノ・リトミック教室</h3>
+                    <p>幼児からシニアまで<br>一人ひとりに合わせた音楽レッスン</p>
+                </div>
+                <div class="footer-section">
+                    <h3>お問い合わせ</h3>
+                    <p>📞 090-5401-8282</p>
+                </div>
+                <div class="footer-section">
+                    <h3>所在地</h3>
+                    <p>国分寺市光町<br>（国分寺市立第二小学校そば）</p>
+                    <p>駐車場あり</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 まりピアノ・リトミック教室. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- モーダルウィンドウ -->
+    <div id="contactModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div style="background-color: white; margin: 5% auto; padding: 40px; border-radius: 15px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; position: relative;">
+            <span onclick="closeContactModal()" style="position: absolute; right: 20px; top: 15px; font-size: 28px; font-weight: bold; cursor: pointer; color: #999;">&times;</span>
+            <h2 style="color: #ff6b9d; text-align: center; margin-bottom: 30px;">お問い合わせフォーム</h2>
+            
+            <form action="mailto:mari8008.cl@gmail.com" method="post" enctype="text/plain" style="display: grid; gap: 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">お名前 *</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">年齢 *</label>
+                        <input type="number" name="age" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    </div>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">メールアドレス *</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">ご希望のコース *</label>
+                    <select name="course" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <option value="">選択してください</option>
+                        <option value="ピアノ">ピアノ</option>
+                        <option value="リトミック">リトミック</option>
+                        <option value="シニア">シニア</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">音楽経験の有無 *</label>
+                    <select name="experience" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <option value="">選択してください</option>
+                        <option value="あり">あり</option>
+                        <option value="なし">なし</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">レッスンの目的や目標</label>
+                    <textarea name="purpose" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">ご希望の曜日・時間帯</label>
+                    <textarea name="schedule" rows="2" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 5px; color: #333; font-weight: bold;">無料体験レッスンご希望の有無 *</label>
+                    <select name="trial" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <option value="">選択してください</option>
+                        <option value="希望する">希望する</option>
+                        <option value="希望しない">希望しない</option>
+                    </select>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" style="background: #ff6b9d; color: white; border: none; padding: 15px 40px; border-radius: 25px; font-size: 1.1rem; cursor: pointer; transition: background 0.3s;">送信</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // ページ切り替え機能
+        function showPage(pageId) {
+            // すべてのページを非表示
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // 選択されたページを表示
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+            
+            // ページトップにスクロール
+            window.scrollTo(0, 0);
+            
+            // デフォルトのリンク動作を防ぐ
+            return false;
+        }
+        
+        // スムーズスクロール機能
+        document.addEventListener('DOMContentLoaded', function() {
+            // アニメーション効果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // アニメーション対象要素の初期設定
+            const animateElements = document.querySelectorAll('.fade-in');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        });
+        
+        // SEO対策：構造化データの追加
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "MusicSchool",
+            "name": "まりピアノ・リトミック教室",
+            "description": "国分寺市光町のピアノ・リトミック教室。幼児からシニアまで一人ひとりに合わせた音楽レッスン。",
+            "url": window.location.href,
+            "telephone": "090-5401-8282",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "国分寺市",
+                "addressRegion": "東京都",
+                "addressCountry": "JP"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "35.7011",
+                "longitude": "139.4719"
+            },
+            "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-20:00",
+            "priceRange": "¥¥",
+            "services": [
+                "ピアノレッスン",
+                "リトミック",
+                "音楽教育",
+                "保育士試験対策"
+            ]
+        };
+        
+        // 構造化データをページに追加
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+        
+        // Google Analytics等のトラッキングコード追加用
+        // (実際の運用時に追加)
+        
+        // パフォーマンス最適化
+        if ('serviceWorker' in navigator) {
+            // サービスワーカーの登録（実際の運用時に追加）
+        }
+        
+        // モーダルウィンドウ機能
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+        
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+        // モーダル外クリックで閉じる
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 
