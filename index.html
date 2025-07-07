@@ -447,6 +447,11 @@
             .container {
                 padding: 0 15px;
             }
+            /* ナビゲーションのstickyを無効化 */
+            nav {
+                position: static;
+                background: rgba(255,255,255,0.98);
+            }
             .hero-content h1 {
                 font-size: 2rem;
             }
@@ -530,6 +535,11 @@
         }
         /* スマートフォン専用の調整 */
         @media (max-width: 480px) {
+            /* ナビゲーションのstickyを無効化 */
+            nav {
+                position: static;
+                background: rgba(255,255,255,0.98);
+            }
             .hero {
                 height: 40vh;
             }
