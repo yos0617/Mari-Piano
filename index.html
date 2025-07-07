@@ -903,6 +903,8 @@
                     <div style="text-align: center; margin-top: 40px;">
                         <p style="color: #ff6b9d; font-weight: bold; font-size: 1.1rem;">お気軽にお問い合わせください♪</p>
                     </div>
+                    
+
                 </div>
             </div>
         </section>
@@ -1024,6 +1026,12 @@
         
         // スムーズスクロール機能
         document.addEventListener('DOMContentLoaded', function() {
+            // ハッシュでページを自動表示
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                showPage(hash);
+            }
+            
             // アニメーション効果
             const observerOptions = {
                 threshold: 0.1,
